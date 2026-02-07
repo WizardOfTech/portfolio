@@ -8,5 +8,5 @@ Hi, my name is Gavin. I am a second year computer science student at the Univers
 in Victoria, British Columbia. My work includes building machine learning solutions for a hackathon challenge.
 
 
-[GitHub] ()
-[LinkedIn] ()
+[GitHub] (https://github.com/WizardOfTech)
+[LinkedIn] (https://www.linkedin.com/in/gavinleecs/)
