@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $siteTitle := .Site.Title | default "Gavin Lee Portfolio" }}
   {{ if .IsHome }}
-    <title>{{ .Site.Title }}</title>
+    <title>{{ $siteTitle }}</title>
   {{ else }}
-    <title>{{ .Title }} · {{ .Site.Title }}</title>
+    <title>{{ .Title }} · {{ $siteTitle }}</title>
   {{ end }}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <style>
@@ -95,13 +96,18 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a href="{{ .Site.Home.RelPermalink }}"><h1>{{ .Site.Title }}</h1></a>
+    <a href="{{ .Site.Home.RelPermalink }}"><h1>{{ $siteTitle }}</h1></a>
     {{ with .Site.Params.description }}<p>{{ . }}</p>{{ end }}
     <nav aria-label="Main navigation">
       <ul class="sidebar-nav">
         <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
-        {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        {{ else }}
+          <li><a href="{{ "about/" | relURL }}">About</a></li>
+          <li><a href="{{ "posts/" | relURL }}">Posts</a></li>
         {{ end }}
       </ul>
     </nav>
