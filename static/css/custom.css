@@ -2,6 +2,10 @@
     text-align: left;
 }
 
+.sidebar nav {
+    margin-top: 2rem;
+}
+
 main.content.container > .posts {
     text-align: center;
 }
