@@ -1,12 +1,30 @@
-+++
-date = '2026-02-07T14:06:34-08:00'
-draft = true
-title = 'Gavin Lee'
-+++
+---
+draft: false
+title: 'Gavin Lee'
+---
 
-Hi, my name is Gavin. I am a second year computer science student at the University of Victoria
-in Victoria, British Columbia. My work includes building machine learning solutions for a hackathon challenge.
+# Hi, I'm Gavin.
 
+I'm a Computer Science student at the University of Victoria in British Columbia.
 
-[GitHub] (https://github.com/WizardOfTech)
-[LinkedIn] (https://www.linkedin.com/in/gavinleecs/)
+I enjoy building software, experimenting with machine learning, and developing practical solutions to real-world problems.
+
+[GitHub](https://github.com/WizardOfTech) · [LinkedIn](https://www.linkedin.com/in/gavinleecs/)
+
+---
+
+## About Me
+
+I'm interested in software development, problem-solving, and exploring how technology can be used to make a difference.
+
+## Featured Projects
+
+I'm currently putting together a collection of projects that demonstrate my programming and problem-solving skills.
+
+## Technical Skills
+
+I'm continuing to develop my skills in programming, software design, and machine learning.
+
+## Contact
+
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/gavinleecs/).

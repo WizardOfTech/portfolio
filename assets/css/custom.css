@@ -1,0 +1,7 @@
+.page-content {
+    text-align: left;
+}
+
+main.content.container > .posts {
+    text-align: center;
+}

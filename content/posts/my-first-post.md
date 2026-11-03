@@ -1,6 +1,5 @@
 +++
-date = '2026-02-07T13:16:18-08:00'
-draft = true
+draft = false
 title = 'My First Post'
 author = 'Gavin'
 description = 'A newly created portfolio'

@@ -2,3 +2,13 @@ baseURL = 'https://localhost/'
 languageCode = 'en-us'
 title = 'Gavin Lee Portfolio'
 theme = 'hyde'
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts" 
+  url = "/posts/"
+  weight = 2
