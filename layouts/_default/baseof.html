@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+  {{ else }}
+    <title>{{ .Title }} · {{ .Site.Title }}</title>
+  {{ end }}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <style>
+    :root {
+      color-scheme: light;
+      font: 16px/1.6 "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #333;
+      background: #fff;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    a {
+      color: #268bd2;
+    }
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      box-sizing: border-box;
+      width: 18rem;
+      padding: 2rem;
+      overflow-y: auto;
+      color: #fff;
+      background: #202020;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .sidebar h1 {
+      margin-top: 0;
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .sidebar-nav {
+      padding: 0;
+      list-style: none;
+    }
+
+    .sidebar-nav li {
+      margin: 0.5rem 0;
+    }
+
+    .content {
+      box-sizing: border-box;
+      max-width: 48rem;
+      margin-left: 18rem;
+      padding: 3rem 2rem;
+    }
+
+    .posts {
+      text-align: center;
+    }
+
+    .post {
+      margin-bottom: 3rem;
+    }
+
+    .post-title {
+      margin-bottom: 0.25rem;
+    }
+
+    .post-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 48rem) {
+      .sidebar {
+        position: static;
+        width: auto;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 2rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="{{ .Site.Home.RelPermalink }}"><h1>{{ .Site.Title }}</h1></a>
+    {{ with .Site.Params.description }}<p>{{ . }}</p>{{ end }}
+    <nav aria-label="Main navigation">
+      <ul class="sidebar-nav">
+        <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </aside>
+  <main class="content">
+    {{ block "main" . }}{{ .Content }}{{ end }}
+  </main>
+</body>
+</html>
