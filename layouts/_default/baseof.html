@@ -10,8 +10,12 @@
     <title>{{ .Title }} · {{ $siteTitle }}</title>
   {{ end }}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  {{ partial "head_css.html" . }}
-  {{ partial "head_fonts.html" . }}
+  <link rel="stylesheet" href="{{ "css/print.css" | relURL }}" media="print">
+  <link rel="stylesheet" href="{{ "css/poole.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/hyde.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "apple-touch-icon-144-precomposed.png" | relURL }}">
   <link rel="shortcut icon" href="{{ "favicon.png" | relURL }}">
 </head>
